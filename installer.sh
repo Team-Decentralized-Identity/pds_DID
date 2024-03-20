@@ -16,10 +16,10 @@ GENERATE_SECURE_SECRET_CMD="openssl rand --hex 16"
 GENERATE_K256_PRIVATE_KEY_CMD="openssl ecparam --name secp256k1 --genkey --noout --outform DER | tail --bytes=+8 | head --bytes=32 | xxd --plain --cols 32"
 
 # The Docker compose file.
-COMPOSE_URL="https://raw.githubusercontent.com/bluesky-social/pds/main/compose.yaml"
+COMPOSE_URL="https://raw.githubusercontent.com/Team-Decentralized-Identity/pds_DID/main/compose.yaml"
 
 # The pdsadmin script.
-PDSADMIN_URL="https://raw.githubusercontent.com/bluesky-social/pds/main/pdsadmin.sh"
+PDSADMIN_URL="https://raw.githubusercontent.com/Team-Decentralized-Identity/pds_DID/main/pdsadmin.sh"
 
 # System dependencies.
 REQUIRED_SYSTEM_PACKAGES="
@@ -42,10 +42,10 @@ REQUIRED_DOCKER_PACKAGES="
 
 PUBLIC_IP=""
 METADATA_URLS=()
-METADATA_URLS+=("http://169.254.169.254/v1/interfaces/0/ipv4/address") # Vultr
-METADATA_URLS+=("http://169.254.169.254/metadata/v1/interfaces/public/0/ipv4/address") # DigitalOcean
-METADATA_URLS+=("http://169.254.169.254/2021-03-23/meta-data/public-ipv4") # AWS
-METADATA_URLS+=("http://169.254.169.254/hetzner/v1/metadata/public-ipv4") # Hetzner
+METADATA_URLS+=("http://143.198.229.128/v1/interfaces/0/ipv4/address") # Vultr
+METADATA_URLS+=("http://143.198.229.128/metadata/v1/interfaces/public/0/ipv4/address") # DigitalOcean
+METADATA_URLS+=("http://143.198.229.128/2021-03-23/meta-data/public-ipv4") # AWS
+METADATA_URLS+=("http://143.198.229.128/hetzner/v1/metadata/public-ipv4") # Hetzner
 
 PDS_DATADIR="${1:-/pds}"
 PDS_HOSTNAME="${2:-}"
