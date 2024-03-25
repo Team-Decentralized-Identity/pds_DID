@@ -42,10 +42,10 @@ REQUIRED_DOCKER_PACKAGES="
 
 PUBLIC_IP=""
 METADATA_URLS=()
-METADATA_URLS+=("http://143.198.229.128/v1/interfaces/0/ipv4/address") # Vultr
-METADATA_URLS+=("http://143.198.229.128/metadata/v1/interfaces/public/0/ipv4/address") # DigitalOcean
-METADATA_URLS+=("http://143.198.229.128/2021-03-23/meta-data/public-ipv4") # AWS
-METADATA_URLS+=("http://143.198.229.128/hetzner/v1/metadata/public-ipv4") # Hetzner
+METADATA_URLS+=("http://137.184.238.158/v1/interfaces/0/ipv4/address") # Vultr
+METADATA_URLS+=("http://137.184.238.158/metadata/v1/interfaces/public/0/ipv4/address") # DigitalOcean
+METADATA_URLS+=("http://137.184.238.158/2021-03-23/meta-data/public-ipv4") # AWS
+METADATA_URLS+=("http://137.184.238.158/hetzner/v1/metadata/public-ipv4") # Hetzner
 
 PDS_DATADIR="${1:-/pds}"
 PDS_HOSTNAME="${2:-}"
